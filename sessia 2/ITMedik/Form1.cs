@@ -19,10 +19,11 @@ namespace ITMedik
 
         private void button_Poiska_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            
             Form2 form2 = new Form2();
-            form1.Hide();
+           
             form2.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

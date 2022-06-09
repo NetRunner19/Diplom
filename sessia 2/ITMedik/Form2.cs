@@ -33,14 +33,14 @@ namespace ITMedik
         {
             Form2 form2 = new Form2();
             Form3 form3 = new Form3();
-            form2.Hide();
+            this.Close();
             form3.ShowDialog();
 
-            DataRow NewRow = mIS_DIPDataSet.Tables[0].NewRow();
+      /*      DataRow NewRow = mIS_DIPDataSet.Tables[0].NewRow();
             NewRow[0] = Guid.NewGuid();
             NewRow[1] = form3.textBox1.Text;
             mIS_DIPDataSet.Tables[0].Rows.Add(NewRow);
-            mIS_DIPDataSet.Tables[0].AcceptChanges();
+            mIS_DIPDataSet.Tables[0].AcceptChanges();*/
 
         }
 
@@ -53,11 +53,11 @@ namespace ITMedik
             form3.textBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
             form3.textBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
             form3.comboBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox4.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
+            form3.maskedTextBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
             //form3.dateTimePicker2.Text = (string)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
             form3.comboBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox5.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox6.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
+            form3.maskedTextBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
+            form3.maskedTextBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
             //form3.dateTimePicker1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
             form3.comboBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
             form3.textBox7.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
@@ -112,6 +112,46 @@ namespace ITMedik
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Length == 0)
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+                    dataGridView1.CurrentCell = null;
+                    dataGridView1.Rows[i].Visible = false;
+
+                    for (int c = 0; c < dataGridView1.Columns.Count; c++)
+                    {
+                        if (dataGridView1[c, i].Value.ToString() == textBox1.Text)
+                        {
+                            dataGridView1.Rows[i].Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                dataGridView1.CurrentCell = null;
+                dataGridView1.Rows[i].Visible = false;
+
+                for (int c = 0; c < dataGridView1.Columns.Count; c++)
+                {
+                    if (dataGridView1[c, i].Value.ToString() == textBox1.Text)
+                    {
+                        dataGridView1.Rows[i].Visible = true;
+                        break;
+                    }
+                }
+            }
         }
     }
 }

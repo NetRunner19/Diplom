@@ -62,5 +62,10 @@ namespace ITMedik
         {
             (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = $"FERSTNAME LIKE '%{textBox1.Text}%'";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
