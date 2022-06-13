@@ -29,9 +29,9 @@ namespace ITMedik
         private void button2_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
-            Form7 form7 = new Form7();
-            form1.Hide();
-            form7.Show();
+            Form6 form6 = new Form6();
+            form6.ShowDialog();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

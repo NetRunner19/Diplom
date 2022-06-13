@@ -21,7 +21,7 @@ namespace ITMedik
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=NETRUNNER;Initial Catalog=MIS_DIP;Integrated Security=True");
-            string InsertQuey = "Insert into DOCTOR(FERSTNAME,LASTNAME,PATRONYMIC,BIRTHDAY,KABINET)Values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Value.ToString() + "','" + textBox5.Text + "')";
+            string InsertQuey = "Insert into DOCTOR(FERSTNAME,LASTNAME,PATRONYMIC,BIRTHDAY,KABINET,POSITION)Values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Value.ToString() + "','" + textBox5.Text + "' ,'" + comboBox1.Text + "')";
             con.Open();
             SqlCommand cmd = new SqlCommand(InsertQuey, con);
             cmd.ExecuteNonQuery();

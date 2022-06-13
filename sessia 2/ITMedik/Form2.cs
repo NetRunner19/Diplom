@@ -46,27 +46,26 @@ namespace ITMedik
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
             Form3 form3 = new Form3();
-            form2.Hide();
+            this.Hide();
             form3.textBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.comboBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.maskedTextBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
+            form3.textBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][2];
+            form3.textBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][3];
+            //form3.comboBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][4];
+            form3.maskedTextBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][15];
             //form3.dateTimePicker2.Text = (string)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.comboBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.maskedTextBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.maskedTextBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
+            form3.comboBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][6];
+            form3.maskedTextBox2.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][7];
+            form3.maskedTextBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][8];
             //form3.dateTimePicker1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.comboBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox7.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox8.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox9.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox10.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox11.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.textBox12.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
-            form3.comboBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1];
+            form3.comboBox3.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][14];
+            form3.textBox7.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][10];
+            form3.textBox8.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][9];
+            //form3.textBox9.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][12];
+            form3.textBox10.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][13]; //grazd
+            form3.textBox11.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][11]; //telefon
+            form3.textBox12.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][13]; //primech
+            //form3.comboBox1.Text = (String)mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][16];
             form3.ShowDialog();
 
             mIS_DIPDataSet.Tables[0].Rows[dataGridView1.CurrentRow.Index][1] = form3.textBox1.Text;

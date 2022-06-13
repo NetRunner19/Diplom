@@ -71,7 +71,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(877, 22);
+            this.button2.Location = new System.Drawing.Point(805, 22);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 44);
             this.button2.TabIndex = 3;
@@ -104,11 +104,11 @@
             this.grazhdanstvoDataGridViewTextBoxColumn,
             this.snilsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pATIENTDIRECTORORYBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 108);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 108);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(993, 428);
+            this.dataGridView1.Size = new System.Drawing.Size(921, 428);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
@@ -290,7 +290,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 548);
+            this.ClientSize = new System.Drawing.Size(945, 548);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button3);
